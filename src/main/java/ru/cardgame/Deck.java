@@ -1,4 +1,4 @@
-package ru.evolution;
+package ru.cardgame;
 
 import java.util.Collection;
 

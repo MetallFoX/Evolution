@@ -1,7 +1,8 @@
-package ru.evolution;
+package ru.cardgame;
 
 import org.junit.Before;
 import org.junit.Test;
+import ru.cardgame.evolution.GameCard;
 
 import java.util.Collection;
 
@@ -12,13 +13,13 @@ import static org.junit.Assert.*;
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */
-public class DeckTest {
+public class GameDeckTest {
 
     private Deck deck;
 
     @Before
     public void setUp() {
-        deck = new DeckImpl();
+        deck = new GameDeck();
     }
 
     @Test
@@ -29,7 +30,7 @@ public class DeckTest {
 
     @Test
     public void AfterOnePut_DeckSizeShouldBeOne() throws Exception {
-        Card card = new CardImpl();
+        Card card = new GameCard();
         deck.put(card);
         assertFalse(deck.isEmpty());
         assertEquals(1, deck.getSize());
@@ -37,7 +38,7 @@ public class DeckTest {
 
     @Test
     public void AfterOnePutAndOneTake_DeckShouldBeEmpty() throws Exception {
-        Card card = new CardImpl();
+        Card card = new GameCard();
         deck.put(card);
         deck.take();
         assertEquals(0, deck.getSize());
@@ -46,8 +47,8 @@ public class DeckTest {
 
     @Test
     public void AfterTwoPutAndOneTake_DeckSizeShouldBeOne() throws Exception {
-        Card card1 = new CardImpl();
-        Card card2 = new CardImpl();
+        Card card1 = new GameCard();
+        Card card2 = new GameCard();
         deck.put(card1);
         deck.put(card2);
 
@@ -55,22 +56,22 @@ public class DeckTest {
         assertEquals(1, deck.getSize());
     }
 
-    @Test(expected = DeckImpl.NotEnoughCardsInDeckException.class)
+    @Test(expected = GameDeck.NotEnoughCardsInDeckException.class)
     public void GivenEmptyDeck_AnyTakeShouldThrowNotEnoughCardsInDeckException() throws Exception {
         deck.take();
     }
 
-    @Test(expected = DeckImpl.NotEnoughCardsInDeckException.class)
+    @Test(expected = GameDeck.NotEnoughCardsInDeckException.class)
     public void GivenDeckWithOneCard_TakeTwoAtOneTimeShouldThrowNotEnoughCardsInDeckException() throws Exception {
-        Card card = new CardImpl();
+        Card card = new GameCard();
         deck.put(card);
         deck.take(2);
     }
 
     @Test
     public void GivenDeckWithTwoCards_AfterTakeTwoAtOneTime_DeckShouldBeEmpty() throws Exception {
-        Card card1 = new CardImpl();
-        Card card2 = new CardImpl();
+        Card card1 = new GameCard();
+        Card card2 = new GameCard();
 
         deck.put(card1);
         deck.put(card2);
@@ -80,15 +81,15 @@ public class DeckTest {
     }
 
 
-    @Test(expected = DeckImpl.AttemptTakeZeroCardsException.class)
+    @Test(expected = GameDeck.AttemptTakeZeroCardsException.class)
     public void WhenTakesZeroCards_ShouldThrowAttemptTakeZeroCardsException() throws Exception {
         deck.take(0);
     }
 
     @Test
     public void WhenOneTwoCardsPut_TwoOneCardsTaken() {
-        Card card1 = new CardImpl();
-        Card card2 = new CardImpl();
+        Card card1 = new GameCard();
+        Card card2 = new GameCard();
 
         deck.put(card1);
         deck.put(card2);
@@ -99,8 +100,8 @@ public class DeckTest {
 
     @Test
     public void WhenOneTwoCardsPut_TwoOneCardsTakenAtOneTime() {
-        Card card1 = new CardImpl();
-        Card card2 = new CardImpl();
+        Card card1 = new GameCard();
+        Card card2 = new GameCard();
 
         deck.put(card1);
         deck.put(card2);

@@ -1,4 +1,4 @@
-package ru.evolution;
+package ru.cardgame;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,27 +8,24 @@ import java.util.Collection;
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */
-public class DiscardPileImpl implements DiscardPile {
+public class GameDiscardPile implements DiscardPile {
 
     private int size;
     private Collection<Card> cards;
 
-    public DiscardPileImpl() {
+    public GameDiscardPile() {
         cards = new ArrayList<>();
     }
 
-    @Override
     public Collection<Card> getCards() {
         return cards;
     }
 
-    @Override
     public void discard(Card card) {
         cards.add(card);
         size++;
     }
 
-    @Override
     public void discard(Collection<Card> cards) {
         if (cards.isEmpty()) {
             throw new AttemptDiscardZeroCardsException();
@@ -37,17 +34,14 @@ public class DiscardPileImpl implements DiscardPile {
         size += cards.size();
     }
 
-    @Override
     public boolean contains(Card card) {
         return cards.contains(card);
     }
 
-    @Override
     public int getSize() {
         return size;
     }
 
-    @Override
     public boolean isEmpty() {
         return size == 0;
     }

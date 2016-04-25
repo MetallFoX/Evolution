@@ -1,4 +1,4 @@
-package ru.evolution;
+package ru.cardgame;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -9,22 +9,20 @@ import java.util.LinkedList;
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */
-public class DeckImpl implements Deck {
+public class GameDeck implements Deck {
 
     private int size;
     private LinkedList<Card> cards;
 
-    public DeckImpl() {
+    public GameDeck() {
         cards = new LinkedList<>();
     }
 
-    @Override
     public void put(Card card) {
         cards.addFirst(card);
         size++;
     }
 
-    @Override
     public Card take() {
         if (isEmpty()) {
             throw new NotEnoughCardsInDeckException();
@@ -34,7 +32,6 @@ public class DeckImpl implements Deck {
         return topCard;
     }
 
-    @Override
     public Collection<Card> take(int numberOfCards) {
         if (numberOfCards == 0) {
             throw new AttemptTakeZeroCardsException();
@@ -46,12 +43,10 @@ public class DeckImpl implements Deck {
         return cards;
     }
 
-    @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
-    @Override
     public int getSize() {
         return size;
     }

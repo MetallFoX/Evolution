@@ -1,11 +1,13 @@
-package ru.evolution.tools;
+package ru.cardgame.tools;
 
 import java.util.Arrays;
 
 /**
+ * Реализация простейшего перемешивальщика.
+ * <p/>
  * Created by MetallFoX on 10.04.2016.
  */
-public class Shuffler<T> {
+public class SimpleShuffler<T> implements Shuffler<T> {
 
     public T[] shuffle(T[] original) {
         int n = original.length;

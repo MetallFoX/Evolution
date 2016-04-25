@@ -1,4 +1,4 @@
-package ru.evolution.tools;
+package ru.cardgame.tools;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -8,13 +8,13 @@ import org.junit.Test;
  * Тест
  * Created by MetallFoX on 10.04.2016.
  */
-public class ShufflerTest {
+public class SimpleShufflerTest {
 
-    Shuffler<Object> shuffler;
+    SimpleShuffler<Object> shuffler;
 
     @Before
     public void setUp() {
-        shuffler = new Shuffler<>();
+        shuffler = new SimpleShuffler<>();
     }
 
     @Test
