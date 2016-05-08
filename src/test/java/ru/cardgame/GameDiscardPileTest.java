@@ -10,7 +10,7 @@ import java.util.Collection;
 import static org.junit.Assert.*;
 
 /**
- * РўРµСЃС‚С‹ СЃР±СЂРѕСЃР°.
+ * Тесты сброса.
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */

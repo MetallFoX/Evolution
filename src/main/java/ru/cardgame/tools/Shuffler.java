@@ -1,7 +1,7 @@
 package ru.cardgame.tools;
 
 /**
- * Company: R-Style Softlab
+ * Company:
  * Author: alex.anikeev
  * Date: 25.04.2016
  */

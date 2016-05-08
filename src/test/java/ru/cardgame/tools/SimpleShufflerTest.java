@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * РўРµСЃС‚
+ * Тест
  * Created by MetallFoX on 10.04.2016.
  */
 public class SimpleShufflerTest {

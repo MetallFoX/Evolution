@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 /**
- * РљРѕР»РѕРґР° РєР°СЂС‚.
+ * Колода карт.
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */

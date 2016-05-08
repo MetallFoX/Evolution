@@ -1,7 +1,7 @@
 package ru.cardgame;
 
 /**
- * РљРѕР»РѕРґР° РєР°СЂС‚.
+ * Колода карт.
  * <p/>
  * Created by MetallFoX on 10.04.2016.
  */

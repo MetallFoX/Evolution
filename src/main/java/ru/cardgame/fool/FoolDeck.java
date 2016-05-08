@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * Company: R-Style Softlab
+ * Company:
  * Author: alex.anikeev
  * Date: 26.04.2016
  */

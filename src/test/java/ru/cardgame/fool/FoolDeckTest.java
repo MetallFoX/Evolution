@@ -10,7 +10,7 @@ import ru.cardgame.fool.suit.SuitColor;
 import java.util.HashSet;
 
 /**
- * Company: R-Style Softlab
+ * Company:
  * Author: alex.anikeev
  * Date: 26.04.2016
  */

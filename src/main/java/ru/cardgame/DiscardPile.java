@@ -3,7 +3,7 @@ package ru.cardgame;
 import java.util.Collection;
 
 /**
- * РЎР±СЂРѕСЃ.
+ * Сброс.
  * <p/>
  * Created by MetallFoX on 10.04.2016.
  */

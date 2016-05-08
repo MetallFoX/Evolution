@@ -9,7 +9,7 @@ import java.util.Collection;
 import static org.junit.Assert.*;
 
 /**
- * РўРµСЃС‚С‹ РєРѕР»РѕРґС‹.
+ * Тесты колоды.
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */

@@ -4,7 +4,7 @@ import ru.cardgame.Card;
 import ru.cardgame.fool.suit.CardSuit;
 
 /**
- * Company: R-Style Softlab
+ * Company:
  * Author: alex.anikeev
  * Date: 25.04.2016
  */

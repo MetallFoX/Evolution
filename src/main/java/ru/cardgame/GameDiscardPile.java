@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * РЎР±СЂРѕСЃ.
+ * Сброс.
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */

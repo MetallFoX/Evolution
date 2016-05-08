@@ -3,7 +3,7 @@ package ru.cardgame.evolution;
 import ru.cardgame.Card;
 
 /**
- * РљР°СЂС‚Р°.
+ * Карта.
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */

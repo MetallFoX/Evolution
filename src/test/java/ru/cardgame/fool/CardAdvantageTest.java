@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Company: R-Style Softlab
+ * Company:
  * Author: alex.anikeev
  * Date: 26.04.2016
  */
