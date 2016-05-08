@@ -7,15 +7,15 @@ import java.util.Collection;
  * <p/>
  * Created by MetallFoX on 10.04.2016.
  */
-public interface Deck {
+public interface Deck<T extends Card> {
 
     boolean isEmpty();
 
     int getSize();
 
-    void put(Card card);
+    void put(T card);
 
-    Card take();
+    T take();
 
-    Collection<Card> take(int numberOfCards);
+    Collection<T> take(int numberOfCards);
 }

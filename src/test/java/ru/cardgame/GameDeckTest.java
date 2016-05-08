@@ -15,11 +15,11 @@ import static org.junit.Assert.*;
  */
 public class GameDeckTest {
 
-    private Deck deck;
+    private GameDeck<Card> deck;
 
     @Before
     public void setUp() {
-        deck = new GameDeck();
+        deck = new GameDeck<>();
     }
 
     @Test
@@ -30,11 +30,13 @@ public class GameDeckTest {
 
     @Test
     public void AfterOnePut_DeckSizeShouldBeOne() throws Exception {
-        Card card = new GameCard();
+        GameCard card = new GameCard();
         deck.put(card);
         assertFalse(deck.isEmpty());
         assertEquals(1, deck.getSize());
     }
+
+
 
     @Test
     public void AfterOnePutAndOneTake_DeckShouldBeEmpty() throws Exception {
@@ -61,11 +63,12 @@ public class GameDeckTest {
         deck.take();
     }
 
-    @Test(expected = GameDeck.NotEnoughCardsInDeckException.class)
-    public void GivenDeckWithOneCard_TakeTwoAtOneTimeShouldThrowNotEnoughCardsInDeckException() throws Exception {
+    @Test
+    public void GivenDeckWithOneCard_TakeTwoAtOneTimeShouldTakeJustOne() throws Exception {
         Card card = new GameCard();
         deck.put(card);
-        deck.take(2);
+        Collection<Card> taken = deck.take(2);
+        assertEquals(1, taken.size());
     }
 
     @Test

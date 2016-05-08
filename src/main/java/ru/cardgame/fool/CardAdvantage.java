@@ -7,4 +7,19 @@ package ru.cardgame.fool;
  */
 public class CardAdvantage {
 
+    private String name;
+    private String designation;
+
+    public CardAdvantage(String name) {
+        this.name = name;
+        this.designation = name.substring(0, 1);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
 }

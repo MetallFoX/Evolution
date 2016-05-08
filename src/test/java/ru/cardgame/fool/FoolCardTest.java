@@ -14,7 +14,7 @@ public class FoolCardTest {
 
     @Test
     public void foolCardShouldHasAdvantage() {
-        CardAdvantage advantage = new CardAdvantage();
+        CardAdvantage advantage = new CardAdvantage("Валет");
         FoolCardSuit suit = new FoolCardSuit("Крести", new SuitColor("black"));
         FoolCard card = new FoolCard(advantage, suit);
 
@@ -23,7 +23,7 @@ public class FoolCardTest {
 
     @Test
     public void foolCardShouldHasSuit() {
-        CardAdvantage advantage = new CardAdvantage();
+        CardAdvantage advantage = new CardAdvantage("Валет");
         FoolCardSuit suit = new FoolCardSuit("Крести", new SuitColor("black"));
         FoolCard card = new FoolCard(advantage, suit);
 

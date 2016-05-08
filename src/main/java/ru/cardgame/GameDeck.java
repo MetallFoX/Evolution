@@ -9,34 +9,37 @@ import java.util.LinkedList;
  * <p/>
  * Created by MetallFoX on 21.11.2015.
  */
-public class GameDeck implements Deck {
+public class GameDeck<T extends Card> implements Deck<T> {
 
     private int size;
-    private LinkedList<Card> cards;
+    private LinkedList<T> cards;
 
     public GameDeck() {
         cards = new LinkedList<>();
     }
 
-    public void put(Card card) {
+    public void put(T card) {
         cards.addFirst(card);
         size++;
     }
 
-    public Card take() {
+    public T take() {
         if (isEmpty()) {
             throw new NotEnoughCardsInDeckException();
         }
-        Card topCard = cards.removeFirst();
+        T topCard = cards.removeFirst();
         --size;
         return topCard;
     }
 
-    public Collection<Card> take(int numberOfCards) {
+    public Collection<T> take(int numberOfCards) {
         if (numberOfCards == 0) {
             throw new AttemptTakeZeroCardsException();
         }
-        Collection<Card> cards = new ArrayList<>(numberOfCards);
+        if (numberOfCards > size) {
+            numberOfCards = size;
+        }
+        Collection<T> cards = new ArrayList<>(numberOfCards);
         for (int i = 0; i < numberOfCards; i++) {
             cards.add(take());
         }
@@ -51,10 +54,15 @@ public class GameDeck implements Deck {
         return size;
     }
 
-
-    public class NotEnoughCardsInDeckException extends RuntimeException {
+    public void setCards(Collection<T> cards) {
+        this.cards = new LinkedList<>(cards);
+        this.size = cards.size();
     }
 
-    public class AttemptTakeZeroCardsException extends RuntimeException {
+
+    public static class NotEnoughCardsInDeckException extends RuntimeException {
+    }
+
+    public static class AttemptTakeZeroCardsException extends RuntimeException {
     }
 }
